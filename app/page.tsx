@@ -15,7 +15,14 @@ export default function Home() {
     setResult(null);
 
     try {
-      const response = await fetch("http://lenn-dev.whf.bz/calculate.php", {
+      // const response = await fetch("http://lenn-dev.whf.bz/calculate.php", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ equation }),
+      // });
+
+      // temporary use proxy because api site dont have ssl yet
+      const response = await fetch("/api/calculate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ equation }),
