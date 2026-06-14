@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   try {
     // Vercel Server calls GoogieHost (Server-to-Server)
     // This bypasses the browser's Mixed Content block
-    const phpResponse = await fetch("http://lenn-dev.whf.bz/calculate.php", {
+    const phpResponse = await fetch("https://lenn-dev.com/testing/calculate.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
